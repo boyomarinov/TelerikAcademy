@@ -1,0 +1,94 @@
+﻿/* RESET STYLE */
+body, table, th, tr, td, p
+{
+    margin: 0;
+    padding: 0;
+}
+/*-------------------*/
+
+body 
+{
+    font-family: 'Segoe UI';
+    font-size: 17px;
+}
+
+table
+{
+    margin: 30px;
+	border-spacing:0;
+}
+
+td
+{
+    padding: 7px 12px;
+    text-align: left;
+    vertical-align: central;
+}
+
+td img
+{
+	vertical-align: central;
+	padding: 0 2px;
+}
+
+thead
+{
+    background-color: rgb(86, 185, 6);
+    color: white;
+}
+
+.light-grey
+{
+    background-color: rgb(236, 236, 216);
+}
+
+.light-grey2
+{
+    background-color: rgb(236, 236, 216);
+}
+
+.light-grey2 td
+{
+	border-bottom: 2px solid;
+	border-color: rgb(236, 226, 210);
+}
+
+td.contact-name-column
+{
+    width: 250px;
+	border-bottom: 2px solid #337d13;
+	border-right: 2px solid #6dc526;
+}
+
+td.city-column
+{
+    width: 200px;
+	border-bottom: 2px solid #337d13;
+	border-left: 2px solid #3a9007;
+	border-right: 2px solid #6dc526;
+}
+
+td.country-column
+{
+    width: 230px;
+	border-bottom: 2px solid #337d13;
+	border-left: 2px solid #3a9007;
+	border-right: 2px solid #6dc526;
+}
+
+td.promoted-column
+{
+	border-bottom: 2px solid #337d13;
+	border-left: 2px solid #3a9007;
+}
+
+td.promoted
+{
+    width: 150px;
+}
+
+td.border-left
+{
+	border-left: 2px solid;
+	border-color: rgb(236, 226, 210);
+}

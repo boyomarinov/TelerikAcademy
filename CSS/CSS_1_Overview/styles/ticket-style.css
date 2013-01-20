@@ -1,0 +1,79 @@
+/* RESET STYLE */
+body, table, th, tr, td, p
+{
+    margin: 0;
+    padding: 0;
+}
+/*-------------------*/
+
+body
+{
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+table
+{
+    margin: 20px;
+    background-color:grey;
+}
+
+td, th
+{
+    vertical-align:top;
+    text-align:left;
+    padding: 7px;
+}
+
+thead, th
+{
+    font-size: 23px;
+    font-weight:normal;
+    font-stretch:extra-expanded;
+    color: lightgrey; /*#b8b4af;*/
+}
+
+p
+{
+    padding-bottom: 3px;
+}
+
+.left
+{
+    color: #fcfaf8;
+    font-style:italic;
+}
+
+.contact-info
+{
+    color: rgb(218, 207, 133);
+}
+
+.grey-label
+{
+    color: lightgray;
+}
+
+#support-status
+{
+    color: rgb(238, 13, 23); 
+    font-weight: bolder;
+}
+
+#answer-status
+{
+    color: rgb(227, 106, 41);
+    font-weight: bolder;
+}
+
+#link-to-host
+{
+    padding-top:10px;
+}
+
+a:link, a:visited
+{
+    color: rgb(218, 207, 133);
+    text-decoration:none;
+}
