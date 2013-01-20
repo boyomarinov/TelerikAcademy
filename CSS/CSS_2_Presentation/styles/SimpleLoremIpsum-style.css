@@ -1,0 +1,33 @@
+﻿/* RESET STYLE */
+body, h3, p, section
+{
+    margin: 0;
+    padding: 0;
+}
+/*-------------------*/
+
+body
+{
+    font-family: Consolas;
+    font-size: 17px;
+}
+
+section
+{
+    padding: 15px;
+}
+
+section h3, section p{
+    color: #0094ff;
+}
+
+section h3
+{
+    font-size: 18px;
+}
+    section h3 span
+    {
+        font-family: 'Edwardian Script ITC';
+        font-size: 50px;
+    }
+
