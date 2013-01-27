@@ -42,33 +42,63 @@ class FillMatrix
     static int[,] FillMatrixC(int n)
     {
         int[,] matrix = new int[n, n];
-        int k = 0;
-        int m = 0;
+        int rows = 0;
+        int cols = 0;
         int value = 1;
 
-        //this loop fills under the main diagonal including
+        //populate values under the main diagonal
         for (int i = n - 1; i >= 0; i--)
         {
-            k = i;
-            m = 0;
-            while (k < n && m < n)
+            rows = i;
+            cols = 0;
+            while (rows < n && cols < n)
             {
-                matrix[k++, m++] = value++;
+                matrix[rows++, cols++] = value++;
             }
         }
 
-        //this loop fills over the main diagonal
+        //populate values over the main diagonal
         for (int j = 1; j < n; j++)
         {
-            k = j;
-            m = 0;
-            while (k < n && m < n)
+            rows = j;
+            cols = 0;
+            while (rows < n && cols < n)
             {
-                matrix[m++, k++] = value++;
+                matrix[cols++, rows++] = value++;
             }
         }
         return matrix;
     }
+    static int[,] FillMatrixD(int n)
+    {
+        int[,] result = new int[n, n];
+        int numberToAdd = 1;
+        int globalCounter = n;
+        int tempValue = -n;
+        int sum = -1;
+
+        do
+        {
+            tempValue = -1 * tempValue / n;
+            for (int i = 0; i < globalCounter; i++)
+            {
+                sum += tempValue;
+                result[sum / n, sum % n] = numberToAdd;
+                numberToAdd++;
+            }
+            tempValue *= n;
+            globalCounter--;
+            for (int i = 0; i < globalCounter; i++)
+            {
+                sum += tempValue;
+                result[sum / n, sum % n] = numberToAdd;
+                numberToAdd++;
+            }
+        } while (globalCounter > 0);
+
+        return result;
+    }
+
     static void PrintMatrix(int[,] matrix)
     {
         for (int i = 0; i < matrix.GetLength(0); i++)
