@@ -1,0 +1,15 @@
+1 using System.IO;
+2 class EnumerateLines
+3     static void Enumerate(string file, string output)
+4         int lineNumber = 1;
+5         StreamReader reader = new StreamReader(file);
+6         using (reader)
+7             using (writer)
+8                 while ((line = reader.ReadLine()) != null)
+9                     line = lineNumber.ToString() + " " + reader.ReadLine();
+10                     lineNumber++;
+11             }
+12     }
+13     {
+14     }
+15 
