@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_GenomeDecoder", "1_GenomeDecoder\1_GenomeDecoder.csproj", "{BAB89C69-3C66-4B4F-8807-3ED4B20D4ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_AirplaneDrinks", "3_AirplaneDrinks\3_AirplaneDrinks.csproj", "{634598C4-5A1E-4417-86EA-8EA4EE28012E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_Guitar", "5_Guitar\5_Guitar.csproj", "{213AF8FE-9A38-4170-9E94-9D0189F49AB8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAB89C69-3C66-4B4F-8807-3ED4B20D4ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB89C69-3C66-4B4F-8807-3ED4B20D4ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB89C69-3C66-4B4F-8807-3ED4B20D4ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB89C69-3C66-4B4F-8807-3ED4B20D4ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{634598C4-5A1E-4417-86EA-8EA4EE28012E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{634598C4-5A1E-4417-86EA-8EA4EE28012E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{634598C4-5A1E-4417-86EA-8EA4EE28012E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{634598C4-5A1E-4417-86EA-8EA4EE28012E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213AF8FE-9A38-4170-9E94-9D0189F49AB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213AF8FE-9A38-4170-9E94-9D0189F49AB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213AF8FE-9A38-4170-9E94-9D0189F49AB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213AF8FE-9A38-4170-9E94-9D0189F49AB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

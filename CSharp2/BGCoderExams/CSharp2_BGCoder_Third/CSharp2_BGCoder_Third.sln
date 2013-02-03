@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Indices", "3_Indices\3_Indices.csproj", "{CBE6BFAF-EA16-4EB4-B88F-1C5C691B3154}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_AcademyTasks", "5_AcademyTasks\5_AcademyTasks.csproj", "{B882CC6B-1BF8-4E3E-8AD6-353546CD5731}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBE6BFAF-EA16-4EB4-B88F-1C5C691B3154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE6BFAF-EA16-4EB4-B88F-1C5C691B3154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE6BFAF-EA16-4EB4-B88F-1C5C691B3154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE6BFAF-EA16-4EB4-B88F-1C5C691B3154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B882CC6B-1BF8-4E3E-8AD6-353546CD5731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B882CC6B-1BF8-4E3E-8AD6-353546CD5731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B882CC6B-1BF8-4E3E-8AD6-353546CD5731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B882CC6B-1BF8-4E3E-8AD6-353546CD5731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

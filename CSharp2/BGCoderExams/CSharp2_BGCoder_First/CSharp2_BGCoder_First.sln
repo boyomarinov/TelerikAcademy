@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_PHPVariables", "1_PHPVariables\1_PHPVariables.csproj", "{DB46F65E-EE23-425C-9202-FE19C9E68240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_Tubes", "3_Tubes\3_Tubes.csproj", "{A85A423E-349C-4FBF-B6C2-9106A4EA9B55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2_7SegmentDigits", "2_7SegmentDigits\2_7SegmentDigits.csproj", "{19C0BAB7-C1D2-4AF1-99D6-06C6EC43DFD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB46F65E-EE23-425C-9202-FE19C9E68240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB46F65E-EE23-425C-9202-FE19C9E68240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB46F65E-EE23-425C-9202-FE19C9E68240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB46F65E-EE23-425C-9202-FE19C9E68240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A85A423E-349C-4FBF-B6C2-9106A4EA9B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85A423E-349C-4FBF-B6C2-9106A4EA9B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85A423E-349C-4FBF-B6C2-9106A4EA9B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85A423E-349C-4FBF-B6C2-9106A4EA9B55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C0BAB7-C1D2-4AF1-99D6-06C6EC43DFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C0BAB7-C1D2-4AF1-99D6-06C6EC43DFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C0BAB7-C1D2-4AF1-99D6-06C6EC43DFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C0BAB7-C1D2-4AF1-99D6-06C6EC43DFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
