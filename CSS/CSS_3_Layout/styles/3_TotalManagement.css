@@ -1,0 +1,77 @@
+html
+{
+    background-color: rgb(59,59,59);
+}
+
+body
+{
+    margin: 0;
+    background-image: linear-gradient(bottom, rgb(59,59,59) 75%, rgb(40,40,40) 75%, rgb(59,59,59) 85%);
+    background-image: -o-linear-gradient(bottom, rgb(59,59,59) 75%, rgb(40,40,40) 75%, rgb(59,59,59) 85%);
+    background-image: -moz-linear-gradient(bottom, rgb(59,59,59) 75%, rgb(40,40,40) 75%, rgb(59,59,59) 85%);
+    background-image: -webkit-linear-gradient(bottom, rgb(59,59,59) 75%, rgb(40,40,40) 75%, rgb(59,59,59) 85%);
+    background-image: -ms-linear-gradient(bottom, rgb(59,59,59) 75%, rgb(40,40,40) 75%, rgb(59,59,59) 85%);
+    background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.75, rgb(59,59,59)), color-stop(0.75, rgb(40,40,40)), color-stop(0.85, rgb(59,59,59)) );
+}
+
+.header
+{
+    width: 670px;
+    margin: 10px auto;
+}
+
+    .header span
+    {
+        float: left;
+        font-size: 24px;
+        color: white;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+
+img
+{
+    margin-right: 20px;
+    float: left;
+}
+
+.textfield
+{
+    margin-right: 20px;
+    margin-top: 13px;
+}
+
+.button-image
+{
+    background: url("../images/button3.png");
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    width: 64px;
+    height: 29px;
+}
+
+section
+{
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+h1
+{
+    font-size: 28px;
+    color: #FBD61A;
+}
+
+p
+{
+    display: block;
+    color: grey;
+    margin: 0px;
+}
+
+    p span
+    {
+        color: white;
+    }

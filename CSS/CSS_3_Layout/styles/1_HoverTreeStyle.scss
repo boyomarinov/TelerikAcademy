@@ -1,0 +1,34 @@
+body
+{
+	nav
+	{
+		ul
+		{
+			list-style-type:none;
+			li
+			{
+				a 
+				{
+					text-decoration:none;
+				}
+				ul
+				{
+					display: none;
+				}
+				
+				&:hover
+				{
+					a
+					{
+						text-decoration:underline;
+					}
+					ul
+					{
+						display: block;
+						color: grey;
+					}
+				}
+			}
+		}
+	}
+}

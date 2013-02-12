@@ -1,0 +1,22 @@
+body {
+  background-color: lightgrey; }
+  body article {  
+    border:1px solid grey;
+    padding: 20px;
+    margin: 15px;
+    width: 400px;
+    background-color: white; }
+    body article img {
+      float: left;
+	  border:1px solid grey;
+      margin-right: 20px; }
+	   body article .buttons{
+	   	margin-bottom:30px;}
+    body article .buttons .button-image {
+      background: url("../images/button-label.png") no-repeat scroll 0 0 transparent;
+      color: white;
+      width: 80px;
+      heigth: 60px;
+      float: right; }
+p{ margin-top:0; margin-right:35px;}
+	

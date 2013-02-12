@@ -1,0 +1,12 @@
+body nav ul {
+  list-style-type: none; }
+  body nav ul li a {
+    text-decoration: none; }
+  body nav ul li ul {
+    display: none; }
+  body nav ul li:hover a {
+    text-decoration: underline; }
+  body nav ul li:hover ul {
+    display: block;
+    color: grey; }
+

@@ -1,0 +1,84 @@
+﻿body
+{
+}
+
+#fStyle
+{
+    text-align: center;
+    font-size: 18px;
+}
+
+#box
+{
+    position: relative;
+    width: 645px;
+    margin: 0 auto;
+}
+
+#intTable
+{
+    width: 424px;
+    float: left;
+    border: 2px solid;
+    padding-bottom: 2px;
+    margin-right: 10px;
+}
+
+.fieldBorder
+{
+    float: left;
+    width: 180px;
+    border: 2px solid;
+}
+
+.pfloat1
+{
+    float: left;
+    margin: 3px;
+}
+
+.pfloat2
+{
+    float: right;
+    margin: 3px;
+}
+
+.nmargin
+{
+    margin: 2px;
+}
+
+#prices
+{
+    padding-top: 70px;
+}
+
+hr
+{
+    border: 1px solid;
+}
+
+#minprice
+{
+    margin-bottom: 20px;
+}
+
+#maxprice
+{
+    margin-bottom: 20px;
+}
+
+#minram
+{
+    margin-bottom: 20px;
+}
+
+#maxram
+{
+    margin-bottom: 20px;
+}
+
+img
+{
+    float: left;
+}
