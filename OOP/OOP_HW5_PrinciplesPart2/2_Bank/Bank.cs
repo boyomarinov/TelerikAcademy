@@ -20,5 +20,12 @@ namespace _2_Bank
         {
             this.accounts.Remove(account);
         }
+        public void PrintAccountsInterest(decimal months)
+        {
+            foreach (var item in this.accounts)
+            {
+                Console.WriteLine(item.CalculateInterest(months));
+            }
+        }
     }
 }

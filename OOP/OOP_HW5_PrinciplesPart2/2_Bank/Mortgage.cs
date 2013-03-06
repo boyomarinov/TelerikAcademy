@@ -23,5 +23,10 @@ namespace _2_Bank
                 return base.CalculateInterest(months - 6);
             }
         }
+
+        public override void DepositMoney(decimal money)
+        {
+            base.DepositMoney(money);
+        }
     }
 }

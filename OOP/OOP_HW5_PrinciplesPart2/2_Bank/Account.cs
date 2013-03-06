@@ -14,15 +14,16 @@ namespace _2_Bank
 
         public Account(Customer customer, decimal balance, decimal interest)
         {
-            this.customer = customer;
-            this.balance = balance;
-            this.interest = interest;
+            this.Customer = customer;
+            this.Balance = balance;
+            this.Interest = interest;
         }
 
         #region Properties
         public Customer Customer
         {
             get { return this.customer; }
+            set { this.customer = value; }
         }
 
         public decimal Balance
@@ -46,5 +47,20 @@ namespace _2_Bank
             }
             return months * this.Interest;
         }
+
+        public virtual void DepositMoney(decimal money)
+        {
+            if (money >= 0)
+            {
+                Balance = Balance + money;
+                Console.WriteLine("You have successfully deposited {0:F2}.", money.ToString());
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("You cannot deposit negative amount of money");
+            }
+        }
+
+        
     }
 }

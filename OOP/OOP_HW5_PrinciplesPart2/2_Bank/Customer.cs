@@ -9,7 +9,7 @@ namespace _2_Bank
 
         public Customer(string name)
         {
-            this.name = name;
+            this.Name = name;
         }
 
         public string Name

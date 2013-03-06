@@ -20,5 +20,24 @@ namespace _2_Bank
             }
             return base.CalculateInterest(months);
         }
+
+        public void WithdrawMoney(decimal money)
+        {
+            if (money < Balance)
+            {
+                Balance = Balance - money;
+                Console.WriteLine("You have successfully withdrawn {0:F2}.", money.ToString());
+            }
+            else
+            {
+                throw new ArgumentException("You don't have that amount of money, try again.");
+            }
+        }
+
+        public override void DepositMoney(decimal money)
+        {
+            base.DepositMoney(money);
+        }
+        
     }
 }
