@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 4 - Check if given object contains a given property</h3>
+    <label for="object">Array: </label>
+    <input type="text" id="object" value="obj"/>
+    <label for="property">Element to remove: </label>
+    <input type="text" id="property" value="length"/>
+
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function checkProperty(object, property){
+            return object[property] !== undefined;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var inputObject = document.getElementById("object").value;
+            var property = document.getElementById("property").value;
+
+            jsConsole.writeLine(checkProperty(inputObject, property));
+        }
+
+    </script>
+</body>
+</html>

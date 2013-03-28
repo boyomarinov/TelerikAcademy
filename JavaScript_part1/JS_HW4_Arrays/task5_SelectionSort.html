@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW4</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task5 - Selection Sort</h3>
+    <input type="text" id="inputData" value="5, 2, 4, 6, -20, 123, 0, 1" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        function swap(arr, index1, index2) {
+            var value = arr[index1];
+            arr[index1] = arr[index2];
+            arr[index2] = value;
+        }
+
+        function min(arr, i) {
+            var min = i;
+            for (i; i < arr.length; i++) {
+                if (arr[i] < arr[min]) {
+                    min = i;
+                }
+            }
+            return min;
+        }
+
+        function SelectionSort(arr) {
+            arr.forEach(function (x, i) {
+                swap(arr, i, min(arr, i));
+            });
+            
+            return arr;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value.split(',');
+            var arr = [];
+            for (var i = 0; i < input.length; i++) {
+                arr.push(parseInt(input[i].trim()));
+            }
+
+            //Input here function to test
+            jsConsole.writeLine(SelectionSort(arr));
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HW5 Functions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 6 - Check if element at given position is bigger than its neighbours</h3>
+    <input id="text" value="1, 3, 6, 4, 5, 5" />
+    <input type="text" id="inputData" value="2" />
+    <button onclick="Test()">CheckIndex</button>
+    <button onclick="Test2()">CheckArray</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+
+        //task 6
+        //Write a function that checks if the element at given position in 
+        //given array of integers is bigger than its two neighbors (when such exist).
+
+        function checkIfBigger(array, index) {
+            if (index == 0 || index == array.length - 1 ||
+                array.length == 0 || array.length == 1 || array.length == 2) {
+                return false;
+            }
+
+            return (array[index] > array[index - 1]) && (array[index] > array[index + 1]);
+        }
+
+        //task7
+        //Write a Function that returns the index of the first element in array 
+        //that is bigger than its neighbors, or -1, if there’s no such element
+        function CheckArray(arr) {
+            var index = -1;
+            for (var i = 1; i < arr.length - 1; i++) {
+                if (checkIfBigger(arr, i)) {
+                    index = i;
+                    break;
+                }
+            }
+
+            return index;
+        }
+
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+
+            var array = document.getElementById("text").value;
+            var num = parseInt(document.getElementById("inputData").value);
+
+            var inputs = array.split(",");
+            var nums = [];
+            for (var i = 0; i < inputs.length; i++) {
+                nums.push(parseInt(inputs[i].trim()));
+            }
+
+            //Input here function to test
+            jsConsole.writeLine(checkIfBigger(nums, num));
+        }
+
+        function Test2() {
+            var array = document.getElementById("text").value;
+
+            var inputs = array.split(",");
+            var nums = [];
+            for (var i = 0; i < inputs.length; i++) {
+                nums.push(parseInt(inputs[i].trim()));
+            }
+
+            //Input here function to test
+            jsConsole.writeLine(CheckArray(nums));
+        }
+
+    </script>
+</body>
+</html>

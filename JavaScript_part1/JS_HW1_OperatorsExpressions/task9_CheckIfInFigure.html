@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Check if your point is in K((1,1), 3) and out of (top:1, left:-1, width:6, height:2)</h3>
+    <label for="coordX">X: </label>
+    <input type="text" id="coordX" name="coordX" />
+    <label for="coordY">Y: </label>
+    <input type="text" id="coordY" name="coordY" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="js-console.js"></script>
+    
+    <script>
+        //9. Write an expression that checks for given point (x, y) if it
+        //is within the circle K( (1,1), 3) and out of the rectangle 
+        //R(top=1, left=-1, width=6, height=2).
+        function ProperPoint(x, y) {
+            return ((x - 1) * (x - 1) + (y - 1) * (y - 1) <= 9) &&
+                   (x >= -1 && x <= 5 && y >= -1 && y <= 1);
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var coordX = parseInt(document.getElementById("coordX").value);
+            var coordY = parseInt(document.getElementById("coordY").value);
+
+            //Input here function to test
+            jsConsole.writeLine(ProperPoint(coordX, coordY));
+        }
+    </script>
+</body>
+</html>

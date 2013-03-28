@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HW5 Functions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 4 - Count divs on page</h3>
+    
+    <button onclick="Test()">CountDivs</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+        function countDivs() {
+            return document.getElementsByTagName("div").length;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+
+            //var input = document.getElementById("inputData").value;
+
+            //Input here function to test
+            jsConsole.writeLine(countDivs());
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 5 - Return youngest person from array</h3>
+    <div>
+        <span>var persons = [</span><br />
+        <span>{firstname : "Gosho", lastname: "Petrov", age: 32},</span><br />
+        <span>{firstname : "Bay", lastname: "Ivan", age: 81},</span><br />
+        <span>{firstname : "Jorko", lastname: "Dimitrov", age: 17},</span><br />
+        <span>{firstname : "Maria", lastname: "Milanova", age: 26}];</span>
+    </div>
+
+    <button onclick="Test()">Get Youngest</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        function getYoungest(arr) {
+            arr.sort(
+                function (a, b) {
+                    if (a.age < b.age) {
+                        return -1;
+                    }
+                    if (a.age > b.age) {
+                        return 1;
+                    }
+                    return 0;
+                }
+           );
+
+            return arr[0].firstname + " " + arr[0].lastname;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+
+            var people = [
+                {firstname : "Gosho", lastname: "Petrov", age: 32},
+                {firstname : "Bay", lastname: "Ivan", age: 81},
+                {firstname : "Jorko", lastname: "Dimitrov", age: 17},
+                {firstname : "Maria", lastname: "Milanova", age: 26}];
+
+            jsConsole.writeLine(getYoungest(people));
+        }
+
+    </script>
+</body>
+</html>

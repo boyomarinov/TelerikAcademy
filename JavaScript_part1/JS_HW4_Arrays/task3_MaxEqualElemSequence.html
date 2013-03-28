@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW4</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task3 - Find maximal sequence of equal elements in array</h3>
+    <input type="text" id="inputData" value="2, 1, 1, 2, 3, 3, 2, 2, 2, 1" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        function MaxSequence(arr) {
+            var element = 0;
+            var previous = 0;
+            var currentMax = 0;
+            var max = 0;
+            var isFirst = true;
+            for (var i = 0; i < arr.length; i++) {
+                if (!isFirst && previous == arr[i]) {
+                    currentMax++;
+                }
+                else {
+                    isFirst = false;
+                    currentMax = 1;
+                }
+
+                if (currentMax > max) {
+                    max = currentMax;
+                    element = arr[i];
+                }
+                previous = arr[i];
+            }
+            var res = "{";
+            for (var i = 0; i < max - 1; i++) {
+                res += element;
+                res += ", ";
+            }
+            res += element + "}";
+            return res;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value.split(',');
+            var arr = [];
+            for (var i = 0; i < input.length; i++) {
+                arr.push(parseInt(input[i].trim()));
+            }
+
+            //Input here function to test
+            jsConsole.writeLine(MaxSequence(arr));
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Conditional Statements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 5. Spell your digit</h3>
+    <label for="input">Digit: </label>
+    <input type="text" id="inputData" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+
+        //Task 5. Write script that asks for a digit and depending on the 
+        //input shows the name of that digit (in English) using a switch statement.
+        function SpellDigit(digit) {
+            switch (digit) {
+                case 0: jsConsole.writeLine("Zero"); break;
+                case 1: jsConsole.writeLine("One"); break;
+                case 2: jsConsole.writeLine("Two"); break;
+                case 3: jsConsole.writeLine("Three"); break;
+                case 4: jsConsole.writeLine("Four"); break;
+                case 5: jsConsole.writeLine("Five"); break;
+                case 6: jsConsole.writeLine("Six"); break;
+                case 7: jsConsole.writeLine("Seven"); break;
+                case 8: jsConsole.writeLine("Eight"); break;
+                case 9: jsConsole.writeLine("Nine"); break;
+                default: jsConsole.writeLine("Invalid input!"); break;
+            }
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = parseInt(document.getElementById("inputData").value);
+
+            //Input here function to test
+            SpellDigit(input);  
+        }
+
+
+    </script>
+</body>
+</html>

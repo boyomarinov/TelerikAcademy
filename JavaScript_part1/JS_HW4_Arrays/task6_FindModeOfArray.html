@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW4</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task6 - Find most frequent number in array</h3>
+    <input type="text" id="inputData" value="4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        function findMostFrequent(arr) {
+            var currentElem = 0;
+            var currentFreqValue = 0;
+            var overallFreq = 0;
+            var currentFreq = 1;
+            var mode = 0;
+
+            for (var i = 0; i < arr.length - 1; i++) {
+                currentElem = arr[i];
+                for (var j = 1; j < arr.length; j++) {
+                    if (currentElem == arr[j]) {
+                        currentFreqValue = currentElem;
+                        currentFreq++;
+
+                        if (currentFreq > overallFreq) {
+                            overallFreq = currentFreq;
+                            mode = currentElem;
+                        }
+                    }
+                }
+
+                currentFreq = 0;
+            }
+
+            jsConsole.writeLine(mode + "(" + overallFreq + " times)");
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value.split(',');
+            var arr = [];
+            for (var i = 0; i < input.length; i++) {
+                arr.push(parseInt(input[i].trim()));
+            }
+
+            //Input here function to test
+            findMostFrequent(arr);
+        }
+
+
+    </script>
+</body>
+</html>

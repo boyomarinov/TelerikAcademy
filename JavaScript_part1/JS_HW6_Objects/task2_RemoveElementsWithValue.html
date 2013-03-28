@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 2 - Remove elements with given value from array</h3>
+    <label for="array">Array: </label>
+    <input type="text" id="array" value='1,2,1,4,1,3,4,1,111,3,2,1,"1"'/>
+    <label for="remove">Element to remove: </label>
+    <input type="text" id="remove" value="1"/>
+
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var inputArray = (document.getElementById("array").value).split(",");
+            var toRemove = document.getElementById("remove").value;
+
+            //prototype of function to remove given element from array
+            Array.prototype.remove = function (elem) {
+                var index = 0;
+                while (index < this.length) {
+                    index = this.indexOf(elem);
+                    if (index > -1) {
+                        this.splice(index, 1);
+                    }
+                    index++;
+                }
+                return this;
+            }
+
+            inputArray.remove(toRemove);
+
+            //Input here function to test
+            if (inputArray.length > 1) {
+                for (var i = 0; i < inputArray.length - 1; i++) {
+                    jsConsole.write(inputArray[i] + ", ");
+                }
+                jsConsole.write(inputArray[inputArray.length - 1]);
+            } else {
+                jsConsole.writeLine("No elements left in array.");
+            }
+        }
+
+
+    </script>
+</body>
+</html>

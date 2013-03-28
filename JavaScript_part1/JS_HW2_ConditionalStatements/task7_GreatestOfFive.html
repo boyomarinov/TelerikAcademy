@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Conditional Statements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 7. The biggest out of three</h3>
+    <label for="num1">First number: </label>
+    <input type="text" id="input1" name="num1" />
+    <br />
+    <label for="num2">Second number: </label>
+    <input type="text" id="input2" name="num2" />
+    <br />
+    <label for="num3">Third number: </label>
+    <input type="text" id="input3" name="num3" />
+    <br />
+    <label for="num4">Third number: </label>
+    <input type="text" id="input4" name="num4" />
+    <br />
+    <label for="num5">Third number: </label>
+    <input type="text" id="input5" name="num5" />
+    <br />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+        //Task 7. Write a script that finds the greatest out of five integers
+        function MaxOfFive(a, b, c, d, e) {
+            var arr = new Array(a, b, c, d, e);
+            var max = a;
+
+            for (var i = 0; i < 5; i++) {
+                max = (arr[i] > max) ? arr[i] : max;
+            }
+
+            return max;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var num1 = parseInt(document.getElementById("input1").value);
+            var num2 = parseInt(document.getElementById("input2").value);
+            var num3 = parseInt(document.getElementById("input3").value);
+            var num4 = parseInt(document.getElementById("input4").value);
+            var num5 = parseInt(document.getElementById("input5").value);
+
+            //Input here function to test
+            jsConsole.writeLine(MaxOfFive(num1, num2, num3, num4, num5));
+        }
+
+
+    </script>
+</body>
+</html>

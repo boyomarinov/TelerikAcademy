@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Conditional Statements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 4. Sort Three Numbers</h3>
+    <label for="num1">First number: </label>
+    <input type="text" id="input1" name="num1" />
+    <label for="num2">Second number: </label>
+    <input type="text" id="input2" name="num2" />
+    <label for="num3">Third number: </label>
+    <input type="text" id="input3" name="num3" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+        //Task 4. Sort 3 real values in descending 
+        //order using nested if statements.
+        function Sort(a, b, c) {
+            var min, middle, max;
+
+            if (a >= b) {
+                if (a >= c) {
+                    max = a;
+                    if (b >= c) {
+                        middle = b;
+                        min = c;
+                    }
+                    else {
+                        middle = c;
+                        min = b;
+                    }
+                }
+                else {
+                    max = c;
+                    middle = a;
+                    min = b;
+                }
+            }
+            else if (b >= c) {
+                max = b;
+                if (a >= c) {
+                    middle = a;
+                    min = c;
+                }
+                else {
+                    middle = c;
+                    min = a;
+                }
+            }
+            else {
+                max = c;
+                if (a >= b) {
+                    middle = a;
+                    min = b;
+                }
+                else {
+                    middle = b;
+                    min = a;
+                }
+            }
+
+            jsConsole.writeLine(min + ", " + middle + ", " + max);
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var num1 = parseInt(document.getElementById("input1").value);
+            var num2 = parseInt(document.getElementById("input2").value);
+            var num3 = parseInt(document.getElementById("input3").value);
+
+            //Input here function to test
+            Sort(num1, num2, num3);
+        }
+
+
+    </script>
+</body>
+</html>

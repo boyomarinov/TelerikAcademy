@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW4</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task2 - Compare lexicographically two char arrays</h3>
+    <label for="first">First array: </label>
+    <input type="text" id="first" name="first" value="12345"/>
+    <label for="second">Second array: </label>
+    <input type="text" id="second" name="second" value="12345"/>
+
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function LexCompareCharArrays(first, second) {
+            var equal = true;
+
+            if (first.length == second.length) {
+                for (var i = 0; i < first.length; i++) {
+                    if (first[i] !== second[i]) {
+                        equal = false;
+                        break;
+                    }
+                }
+            }
+            else {
+                equal = false;
+            }
+
+            return equal;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("first").value.split('');
+            var input2 = document.getElementById("second").value.split('');
+
+            //Input here function to test
+            jsConsole.writeLine(LexCompareCharArrays(input, input2));
+        }
+
+
+    </script>
+</body>
+</html>

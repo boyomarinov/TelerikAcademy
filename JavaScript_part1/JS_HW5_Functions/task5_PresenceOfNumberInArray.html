@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HW5 Functions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 5 - Count how many times number appears in array</h3>
+    <input id="text" value="1, 2, 3, 4, 5, 5"/>
+    <input type="text" id="inputData" value="5"/>
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+        function findOccurences(number, array) {
+            var count = 0;
+            var inputs = array.split(",");
+            var nums = [];
+            for (var i = 0; i < inputs.length; i++) {
+                nums.push(parseInt(inputs[i].trim()));
+            }
+
+            for (var i = 0; i < nums.length; i++) {
+                if (number == nums[i]) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+
+            var array = document.getElementById("text").value;
+            var num = parseInt(document.getElementById("inputData").value);
+
+            //Input here function to test
+            jsConsole.writeLine(findOccurences(num, nums));
+        }
+
+
+    </script>
+</body>
+</html>

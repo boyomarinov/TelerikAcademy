@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 3 - Depp Copy</h3>
+    <label for="object">Array: </label>
+    <input type="text" id="object" value="1, 2, 3, 4"/>
+
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function deepCopy(from, to) {
+            var to = to || {};
+            for (var i in from) {
+                if (typeof from[i] === 'object') {
+                    to[i] = (from[i].constructor == Array) ? [] : {};
+                    deepCopy(from[i], to[i]);
+                } else {
+                    to[i] = from[i];
+                }
+            }
+            return to;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var inputArray = (document.getElementById("object").value).split(",");
+            var arr = [];
+            for (var i = 0; i < inputArray.length; i++) {
+                arr.push(parseInt(inputArray[i].trim()));
+            }
+
+            var result = [];
+            deepCopy(arr, result);
+
+            if (inputArray.length > 1) {
+                for (var i = 0; i < inputArray.length - 1; i++) {
+                    jsConsole.write(inputArray[i] + ", ");
+                }
+                jsConsole.write(inputArray[inputArray.length - 1]);
+            } else {
+                jsConsole.writeLine("No elements in array.");
+            }
+
+        }
+
+    </script>
+</body>
+</html>

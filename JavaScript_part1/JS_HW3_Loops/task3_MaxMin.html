@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW3</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task3 - Max and Min from sequence</h3>
+
+    <input type="text" id="inputData" value="-1, 2, 4, 5, 6, 123"/>
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function MaxFromSequence(num) {
+            var max = num[0];
+            for (var i = 0; i <= num.length; i++) {
+                if (max > num[i]) {
+                    max = num[i];
+                }
+            }
+            return max;
+        }
+        function MinFromSequence(num) {
+            var min = num[0];
+            for (var i = 0; i < num.length; i++) {
+                if (min < num[i]) {
+                    min = num[i];
+                }
+            }
+            return min;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value;
+            var numsInString = input.split(',');
+            var nums = [];
+            for (var i = 0; i < numsInString.length; i++) {
+                nums[i] = parseInt(numsInString[i].trim());
+            }
+
+            //Input here function to test
+            jsConsole.writeLine("Max: " + MaxFromSequence(nums));
+            jsConsole.writeLine("Min: " + MinFromSequence(nums));
+        }
+
+    </script>
+</body>
+</html>

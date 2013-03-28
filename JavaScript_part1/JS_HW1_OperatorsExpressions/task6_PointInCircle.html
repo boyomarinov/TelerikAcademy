@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Check if your point is in circle K(0, 5):</h3>
+    <label for="coordX">X: </label>
+    <input type="text" id="x" />
+    <label for="coordY">Y: </label>
+    <input type="text" id="y" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="js-console.js"></script>
+    
+    <script>
+        //6. Write an expression that checks if given print (x,  y) is within
+        //a circle K(O, 5).
+        function CheckIfInCircle(x, y) {
+            return (x * x + y * y < 25);
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var coordX = document.getElementById("x").value;
+            var coordY = document.getElementById("y").value;
+
+            //Input here function to test
+            jsConsole.writeLine(CheckIfInCircle(coordX, coordY));
+        }
+    </script>
+</body>
+</html>

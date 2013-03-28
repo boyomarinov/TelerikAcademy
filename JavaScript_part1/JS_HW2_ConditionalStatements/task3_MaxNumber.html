@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JS Conditional Statements</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 3. The biggest out of three</h3>
+    <label for="num1">First number: </label>
+    <input type="text" id="input1" name="num1" />
+    <label for="num2">Second number: </label>
+    <input type="text" id="input2" name="num2" />
+    <label for="num3">Third number: </label>
+    <input type="text" id="input3" name="num3" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        //Task 3. Write a script that finds the biggest of three 
+        //integers using nested if statements.
+        function MaxFromThree(a, b, c) {
+            if (a >= b) {
+                if (a >= c) {
+                    return a;
+                }
+            }
+            if (b >= a) {
+                if (b >= c) {
+                    return b;
+                }
+            }
+            if (c >= b) {
+                if (c >= a) {
+                    return c;
+                }
+            }
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var num1 = parseInt(document.getElementById("input1").value);
+            var num2 = parseInt(document.getElementById("input2").value);
+            var num3 = parseInt(document.getElementById("input3").value);
+
+            //Input here function to test
+            jsConsole.writeLine(MaxFromThree(num1, num2, num3));
+        }
+
+
+    </script>
+</body>
+</html>

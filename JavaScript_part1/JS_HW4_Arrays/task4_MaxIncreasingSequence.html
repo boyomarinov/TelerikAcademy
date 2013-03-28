@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task4 - Find maximal increasing sequence in array</h3>
+    <input type="text" id="inputData" value="3, 2, 3, 4, 2, 2, 4" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+
+    <script>
+        function MaxIncreasingSequence(arr) {
+            //var elements = [];
+            var maxStart = 0;
+            var currentStart = 0;
+            var sequenceLength = 1;
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i - 1] < arr[i]) {
+                    if (i - currentStart + 1 > sequenceLength) {
+                        maxStart = currentStart;
+                        sequenceLength = i - currentStart + 1;
+                    }
+
+                }
+                else {
+                    currentStart = i;
+                }
+            }
+
+            var res = "{";
+            for (var i = maxStart; i < sequenceLength; i++) {
+                res += arr[i];
+                res += ", ";
+            }
+            res += arr[sequenceLength] + "}";
+            return res;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value.split(',');
+            var arr = [];
+            for (var i = 0; i < input.length; i++) {
+                arr.push(parseInt(input[i].trim()));
+            }
+
+            //Input here function to test
+            jsConsole.writeLine(MaxIncreasingSequence(arr));
+        }
+
+
+    </script>
+</body>
+</html>

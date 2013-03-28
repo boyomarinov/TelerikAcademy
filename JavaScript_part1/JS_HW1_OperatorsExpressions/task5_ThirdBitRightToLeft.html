@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Check value of third bit (from right-to-left) of your number: </h3>
+    <input type="text" id="inputData" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="js-console.js"></script>
+    
+    <script>
+        //5. Write a boolean expression for finding if the bit 3 (counting from 0) 
+        //of a given integer is 1 or 0.
+        function CheckThirdBit(num) {
+            var mask = 1;
+            mask = mask << 2;
+            var result = num & mask;
+            if (result > 0) {
+                return 1;
+            }
+            return 0;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = document.getElementById("inputData").value;
+
+            //Input here function to test
+            jsConsole.writeLine(CheckThirdBit(input));
+        }
+    </script>
+</body>
+</html>

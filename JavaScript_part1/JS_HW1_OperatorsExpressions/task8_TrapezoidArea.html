@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Calculate trapezoid area:</h3>
+    <label for="sideA">Side A: </label>
+    <input type="text" id="sideA" />
+    <label for="sideB">Side B: </label>
+    <input type="text" id="sideB" />
+    <label for="height">Height: </label>
+    <input type="text" id="height" />
+
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="js-console.js"></script>
+    
+    <script>
+        //8. Write an expression that calculates trapezoid's area by given
+        //sides a and b and height h.
+        function TrapezoidArea(sideA, sideB, height) {
+            var middle = (sideA + sideB) / 2;
+            return middle * height;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var sideA = parseInt(document.getElementById("sideA").value);
+            var sideB = parseInt(document.getElementById("sideB").value);
+            var height = parseInt(document.getElementById("height").value);
+
+            //Input here function to test
+            jsConsole.writeLine(TrapezoidArea(sideA, sideB, height));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW3</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task4 - Find largest and smallest property</h3>
+
+    <!--<input type="text" id="inputData" />-->
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+		function PrintAttr()
+		{
+			var arr = [];
+			for(var prop in document){
+				arr.push(prop.toString);
+			}
+			for(var prop in navigator){
+				arr.push(prop);
+			}
+			for(var prop in window){
+				arr.push(prop);
+			}
+			
+			for(var prop in arr){
+				jsConsole.writeLine(prop);
+			}
+		}
+	
+        function GetBiggestAndSmallestProperty() {
+            var smallest = "ZZZZZZZ";
+            var biggest = "AAAAAAA";
+
+            //Check in document properties
+            for (var prop in document) {
+                if (prop > biggest) {
+                    biggest = prop;
+                }
+                if (prop < smallest) {
+                    smallest = prop;
+                }
+            }
+
+            //Check in navigator properties
+            for (var prop in navigator) {
+                if (prop > biggest) {
+                    biggest = prop;
+                }
+                if (prop < smallest) {
+                    smallest = prop;
+                }
+            }
+
+            //Check in window properties
+            for (var prop in window) {
+                if (prop > biggest) {
+                    biggest = prop;
+                }
+                if (prop < smallest) {
+                    smallest = prop;
+                }
+            }
+
+            jsConsole.writeLine("Max: " + biggest.toString());
+            jsConsole.writeLine("Min: " + smallest.toString());
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            
+            //Input here function to test
+            PrintAttr();
+
+        }
+
+    </script>
+</body>
+</html>

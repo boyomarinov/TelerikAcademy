@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HW5 Functions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task 1 - Spell last digit</h3>
+
+    <input type="text" id="inputData" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function spellLastDigit(number){
+            var digits = ["zero", "one", "two", "three", "four", "five",
+                      "six", "seven", "eight", "nine"];
+    
+            return digits[number % 10];
+        }
+        
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = parseInt(document.getElementById("inputData").value);
+
+            //Input here function to test
+            jsConsole.writeLine(spellLastDigit(input));
+        }
+
+
+    </script>
+</body>
+</html>

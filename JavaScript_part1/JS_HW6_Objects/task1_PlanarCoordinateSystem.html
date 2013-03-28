@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW1</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 1 - Triangle</h3>
+    <label for="pointA">A:</label>
+    <input type="text" id="pointA" value="1,1"/>
+    <label for="pointB">B: </label>
+    <input type="text" id="pointB" value="3,1"/>
+    <label for="pointC">C: </label>
+    <input type="text" id="pointC" value="4,1"/>
+
+    <!--<input type="text" id="inputData" />-->
+    <button onclick="Test()">Can form triangle</button>
+    <br />
+    Calculate distance between A and B<button onclick="Test2()">Calculate Distance</button> 
+
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function Point(x, y) {
+            return point = {
+                X: x,
+                Y: y
+            }
+        }
+
+        function parsePoint(input) {
+            var splitted = input.split(",");
+            var varx = parseFloat(splitted[0].trim());
+            var vary = parseFloat(splitted[1].trim());
+            var point = Point(varx, vary);
+            return point;
+        }
+
+        function calculateDistance(start, end) {
+            return Math.sqrt(Math.pow(start.X - end.X, 2) - Math.pow(start.Y - end.Y, 2));
+        }
+
+        function canFormTriangle(p1, p2, p3) {
+            var sideA = parseFloat(calculateDistance(p1, p2));
+            var sideB = parseFloat(calculateDistance(p2, p3));
+            var sideC = parseFloat(calculateDistance(p1, p3));
+
+            return (sideA + sideB > sideC) &&
+                   (sideA + sideC > sideB) &&
+                   (sideB + sideC > sideA);
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var inputA = document.getElementById("pointA").value;
+            var inputB = document.getElementById("pointB").value;
+            var inputC = document.getElementById("pointC").value;
+
+            var pointA = parsePoint(inputA);
+            var pointB = parsePoint(inputB);
+            var pointC = parsePoint(inputC);
+
+            //Input here function to test
+            jsConsole.writeLine(canFormTriangle(pointA, pointB, pointC));
+        }
+
+        function Test2() {
+            var inputA = document.getElementById("pointA").value;
+            var inputB = document.getElementById("pointB").value;
+            var pointA = parsePoint(inputA);
+            var pointB = parsePoint(inputB);
+
+            jsConsole.writeLine(calculateDistance(pointA, pointB));
+        }
+
+
+    </script>
+</body>
+</html>

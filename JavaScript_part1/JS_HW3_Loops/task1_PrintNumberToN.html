@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript HW3</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>Task1 - Print numbers from [0...N]</h3>
+
+    <input type="text" id="inputData" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+        function PrintNumber(num) {
+            if(num < 0){
+                jsConsole.writeLine("Input positive number!");
+            }
+            else{
+                for (var i = 0; i <= num; i++) {
+                    jsConsole.writeLine(i);
+                }
+            }
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = parseInt(document.getElementById("inputData").value);
+
+            //Input here function to test
+            PrintNumber(input);
+        }
+
+    </script>
+</body>
+</html>

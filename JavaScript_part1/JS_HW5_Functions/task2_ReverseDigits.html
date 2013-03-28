@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HW5 Functions</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<h3>Task 2 - Reverse number</h3>
+
+    <input type="text" id="inputData" />
+    <button onclick="Test()">Eval</button>
+    <div id="js-console"></div>
+
+    <script src="scripts/js-console.js"></script>
+    
+    <script>
+
+        function getLength (number) {
+            var len = 0;
+            while (number > 0)
+            {
+                number = parseInt(number / 10);
+                len++;
+            }
+
+            return len;
+        }   
+
+        function reverse (num) {
+            if(num < 10){
+                return num;
+            }
+
+            var digitsLen = getLength(num);
+            var degree = digitsLen - 1;
+            var result = 0;
+
+            for (var i = 0; i < digitsLen; i++) {
+                result += parseInt((num % 10) * Math.pow(10, degree));
+                degree--;
+                num = parseInt(num / 10);
+            }
+
+            return result;
+        }
+
+        //-----------------------TEST-------------------------------------
+        function Test() {
+            var input = parseInt(document.getElementById("inputData").value);
+
+            //Input here function to test
+            jsConsole.writeLine(reverse(input));
+        }
+
+
+    </script>
+</body>
+</html>
