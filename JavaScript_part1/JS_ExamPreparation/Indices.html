@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>8 Feb 2012 - Indices</title>
+</head>
+<script>
+    function Solve(args) {
+        //args = [];
+        //args[1] = "1 2 3 5 7 8";
+        var indices = args[1].split(' ');
+        var resultNumber = [];
+        var loopStartIndex = -1;
+
+        var visited = {};
+        var currentIndex = 0;
+        while (currentIndex >= 0 && currentIndex < indices.length) {
+            resultNumber.push(currentIndex);
+            visited[currentIndex] = true;
+            currentIndex = indices[currentIndex];
+            if (visited[currentIndex] == true) {
+                //loopStartIndex = currentIndex;
+                for (var i = 0; i < resultNumber.length; i++) {
+                    if (resultNumber[i] == currentIndex) {
+                        loopStartIndex = i;
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+
+        if (loopStartIndex != -1) {
+            var resultString = "";
+
+            for (var i = 0; i < loopStartIndex - 1; i++) {
+                resultString += resultNumber[i] + " ";
+            }
+            //console.log(loopStartIndex);
+            if(loopStartIndex != 0){
+                resultString += resultNumber[loopStartIndex - 1] + "(";
+            }
+            else{
+                resultString += "(";
+            }
+
+            for (var i = loopStartIndex; i < resultNumber.length - 1; i++) {
+                resultString += resultNumber[i] + " ";
+            }
+
+            resultString += resultNumber[resultNumber.length - 1] + ")";
+
+            return resultString;
+        }
+        else {
+            return resultNumber.join(" ");
+        }
+    }
+
+    //test function
+    function SendInputToSolve() {
+        args = [];
+        args[0] = "6";
+        args[1] = "1 2 3 5 7 8";
+        //args[1] = "1 2 3 5 7 1";
+        console.log(Solve(args));
+    }
+</script>
+<body onload="SendInputToSolve()">
+
+</body>
+</html>

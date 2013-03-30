@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>5 Feb 2013 - Joro the Rabbit</title>
+
+    <script>
+        function Solve(args) {
+            var positions = args[0].split(", ");
+            var positionsLength = positions.length;
+            for (var i = 0; i < positionsLength; i++) {
+                positions[i] = parseInt(positions[i]);
+            }
+            var maxJumpsCount = 0;
+
+            for (var start = 0; start < positionsLength; start++) {
+                for (var step = 1; step <= positionsLength; step++){
+                    var currentPosition = start;
+                    var visited = {};
+                    var jumpsCount = 0;
+
+                    while (!visited[currentPosition]) {
+                        visited[currentPosition] = true;
+                        var previousPosition = currentPosition;
+                        currentPosition = currentPosition + step;
+                        jumpsCount++;
+
+                        if (currentPosition >= positionsLength) {
+                            currentPosition = currentPosition - positionsLength;
+                        }
+
+                        if (positions[currentPosition] <= positions[previousPosition]) {
+                            break;
+                        }
+                    }
+
+                    if (jumpsCount > maxJumpsCount) {
+                        maxJumpsCount = jumpsCount;
+                    }
+                }
+            }
+            return maxJumpsCount;
+        }
+
+        function TestIO() {
+            var args = [];
+            //args[0] = "1, 1, 1";
+            args[0] = "1, -2, -3, 4, -5, 6, -7, -8";
+            //args[0] = "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0";
+            console.log(Solve(args));
+        }
+    </script>
+</head>
+<body onload="TestIO()">
+
+</body>
+</html>

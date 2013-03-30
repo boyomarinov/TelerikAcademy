@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>11 Feb 2013 - Three In One</title>
+
+    <script>
+        function Solve(args) {
+            var result = "";
+
+            //task1
+            var points = args[0].split(",");
+            for (var i = 0; i < points.length; i++) {
+                points[i] = parseInt(points[i]);
+            }
+            var arrayByPoints = {};
+
+            for (var i = 0; i < points.length; i++) {
+                if (arrayByPoints[points[i]] == undefined) {
+                    arrayByPoints[points[i]] = 1;
+                } else {
+                    arrayByPoints[points[i]]++;
+                }
+            }
+
+            for (var i = 21; i >= 0; i--) {
+                if (arrayByPoints[i] != undefined) {
+                    if (arrayByPoints[i] == 1) {
+                        result += points.indexOf(i) + "\r\n";
+                        break;
+                    }
+                    else {
+                        result += "-1" + "\r\n";
+                        break;
+                    }
+                }
+            }
+
+            //task2
+            var cakes = args[1].split(",");
+            for (var i = 0; i < cakes.length; i++) {
+                cakes[i] = parseInt(cakes[i]);
+            }
+            cakes.sort();
+            cakes.reverse();
+            var friends = parseInt(args[2]) + 1;
+            var myPieces = 0;
+            for (var i = 0; i < cakes.length; i += friends) {
+                myPieces += cakes[i];
+            }
+            result += myPieces + "\r\n";
+
+            //task3
+            var transactions = 0;
+            var money = args[3].split(" ");
+            for (var i = 0; i < 6; i++) {
+                money[i] = parseInt(money[i]);
+            }
+
+            var diff = []
+            for (var i = 0; i < 3; i++) {
+                diff.push(money[i] - money[i + 3]);
+            }
+
+            var wontDrinkBear = false;
+            var finalized = false;
+            //gold deficiency
+            if (diff[0] < 0) {
+                if (diff[1] >= diff[0] * (-11)) {
+                    transactions += diff[0] * (-1);
+                    diff[0] = 0;
+                    diff[1] -= diff[0] * (-11);
+                }
+                else {
+                    if (diff[2] >= (diff[0] * (-11) - diff[1]) * 11) {
+                        transactions += (diff[0] * (-11) - diff[1]);
+                        transactions += (diff[0] * (-11) - diff[1]) * 11;
+                        diff[2] -= (diff[0] * (-11) - diff[1]) * 11;
+                        diff[1] = 0;
+                        diff[0] = 0;
+
+                        result += transactions + "\r\n";
+                        finalized = true;
+                    }
+                    else {
+                        wontDrinkBear = true;
+                    }
+                }
+            }
+
+            if (finalized == false) {
+                //silver deficiency
+                if (diff[1] < 0) {
+                    if (diff[3] >= diff[1] * (-11)) {
+                        transactions += diff[1] * (-1);
+                        diff[2] -= diff[1] * (-11);
+                    }
+                    else {
+                        if (diff[0] * 9 >= diff[1] * (-1)) {
+                            var toTransfer = Math.ceil(diff[1]*(-1) / 9);
+                            transactions += toTransfer;
+                            diff[1] += toTransfer * 9;
+                            diff[0] -= toTransfer;
+
+                            result += transactions + "\r\n";
+                            finalized = true;
+                        }
+                        else {
+                            wontDrinkBear = true;
+                        }
+                    }
+                }
+            }
+
+            if (wontDrinkBear) {
+                result += "-1" + "\r\n";
+            }
+            else {
+                if (finalized == false) {
+                    //bronze deficiency
+                    if (diff[2] < 0) {
+                        if (diff[1] * 9 >= diff[2] * (-1)) {
+                            var toTransfer2 = Math.ceil(diff[2]*(-1) / 9);
+                            transactions += toTransfer2;
+                            diff[2] += toTransfer2 * 9;
+                            diff[1] -= toTransfer2;
+
+                            result += transactions += "\r\n";
+                            finalized = true;
+                        }
+                        else {
+                            if ((diff[0] * 9 + diff[1]) * 9 >= diff[2] * (-1)) {
+                                var needed = Math.ceil(diff[2]*(-1)/9);
+                                transactions += Math.ceil(needed / 9);
+                                transactions += needed;
+                                result += transactions += "\r\n";
+                            }
+                            else {
+                                result += "-1" + "\r\n";
+                            }
+                        }
+                    }
+                }
+            }
+
+            return result;
+        }
+
+        function TestIO() {
+            args = [];
+            args[0] = "21,20,19";
+            args[1] = "6,7,9,6,4";
+            args[2] = "2";
+            //args[3] = "1 0 0 0 0 81";
+            args[3] = "1 100 12 5 53 33"
+            console.log(Solve(args));
+        }
+    </script>
+</head>
+<body onload="TestIO()">
+</body>
+</html>
