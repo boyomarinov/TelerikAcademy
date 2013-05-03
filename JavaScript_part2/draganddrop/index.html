@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Drag and Drop Bucket Game</title>
+
+    <link href="styles/task1_2_style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="game-wrapper">
+        <header>
+            <label for="game-level">Level: </label>
+            <select id="game-level" name="game-level">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <span id="new-game" class="square-button" onclick="newGame()">Start Game</span>
+
+            <span id="score" onclick="showWallOfFame()">
+                <img src="images/prize.png" alt="hall of fame"/>
+                <span class="square-button">Wall of Fame</span>
+            </span>
+            
+
+        </header>
+
+        <div id="draggable-zone">
+            <div id="chrono"></div>
+
+            <img id="trash-bin" src="images/empty.png" ondrop="drop(event)" ondragover="allowDrop(event)"
+                ondragenter="handleDragEnter(event)" ondragleave="handleDragLeave(event)" />
+            <img id="arrow" class="hidden" src="images/down_arrow.png" />
+
+            <span id="current-score"></span>
+
+            <div id="user-input" class="start">
+                <fieldset>
+                    <legend>Write your name on the wall of fame</legend>
+                    <label for="username">Name: </label>
+                    <input type="text" id="username" name="username" size="50" />
+                    <label>Your score: </label>
+                    <label id="scoreInput" class="square-button"></label>
+                    <button id="submit-userinput" onclick="saveUserInput()">Save score</button>
+                </fieldset>
+            </div>
+            <div id="wall-of-fame" class="hidden wall">
+            </div>
+            <div id="close-button" class="hidden wall" onclick="hideWallOfFame()">Close</div>
+        </div>
+    </div>
+
+    <script src="scripts/task1_2_script.js"></script>
+</body>
+</html>

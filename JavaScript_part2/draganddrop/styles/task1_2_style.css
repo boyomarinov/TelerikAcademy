@@ -1,0 +1,349 @@
+﻿body, div, span, header, select, img,
+fieldset, legend, label, button
+{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face
+{
+    font-family: digital_font;
+    src: url('../fonts/digital-7.ttf');
+}
+
+body
+{
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    padding: 10px;
+}
+
+div#game-wrapper
+{
+    width: 1050px;
+    height: 600px;
+}
+
+    div#game-wrapper header
+    {
+        width: 99%;
+        height: 7%;
+        border: 1px solid black;
+        border-bottom: none;
+        padding-top: 10px;
+    }
+
+        div#game-wrapper header label
+        {
+            margin-left: 10px;
+            margin-right: 5px;
+            font-size: 1.1em;
+        }
+
+        div#game-wrapper header span#score
+        {
+            position: relative;
+            float: right;
+            margin-right: 20px;
+        }
+
+            div#game-wrapper header span#score img
+            {
+                position: absolute;
+                right: 140px;
+                top: -10px;
+                height: 45px;
+            }
+
+
+
+.square-button
+{
+    font-weight: bold;
+    font-size: 1.2em;
+    border: 1px solid black;
+    padding: 3px 10px;
+    margin-top: 5px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+div#draggable-zone
+{
+    position: relative;
+    width: 99%;
+    height: 92%;
+    border: 1px solid black;
+}
+
+#chrono
+{
+    position: absolute;
+    top: 50px;
+    left: 55px;
+    width: 155px;
+    font-family: digital_font;
+    font-size: 2.4em;
+    text-align: left;
+}
+
+#trash-bin
+{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    width: 128px;
+    height: 128px;
+}
+
+    #trash-bin.over
+    {
+        top: 177px;
+    }
+
+.piece-of-trash
+{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    /*background: url(../images/document.png);*/
+    background-repeat: no-repeat;
+}
+
+#arrow
+{
+    position: absolute;
+    top: 130px;
+    left: 80px;
+    width: 64px;
+    height: 64px;
+}
+
+    #arrow.hidden
+    {
+        display: none;
+    }
+
+    #arrow.move
+    {
+        display: block;
+        animation: arrow-movement 1s infinite;
+        -webkit-animation: arrow-movement 1s infinite;
+    }
+
+#current-score
+{
+    position: absolute;
+    top: 310px;
+    left: 70px;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#user-input
+{
+    position: absolute;
+    top: 80px;
+    left: 350px;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+}
+
+    #user-input fieldset
+    {
+        padding: 15px;
+    }
+
+        #user-input fieldset legend
+        {
+            font-size: 1.2em;
+        }
+
+    #user-input input
+    {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        padding: 8px;
+    }
+
+    #user-input button
+    {
+        display: block;
+        margin-top: 30px;
+        padding: 5px;
+    }
+
+    #user-input.start
+    {
+        display:none;
+    }
+
+    #user-input.hidden
+    {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 1s, opacity 1s linear;
+        animation: userinput-up 1s;
+        -webkit-animation: userinput-up 1s;
+    }
+
+    #user-input.show
+    {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 1s linear;
+        animation: userinput-down 1s;
+        -webkit-animation: userinput-down 1s;
+    }
+
+#wall-of-fame
+{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 250px;
+    height: 180px;
+    border: 1px solid black;
+    border-top: none;
+}
+
+    .wall.hidden
+    {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.5s, opacity 0.5s linear;
+    }
+
+    .wall.show
+    {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.5s linear;
+    }
+
+    #wall-of-fame span
+    {
+        display: block;
+        margin: 5px 35px;
+    }
+
+#close-button
+{
+    position: absolute;
+    top: 155px;
+    right: 21px;
+    width: 250px;
+    height: 25px;
+    border-top: 1px solid black;
+    text-align: center;
+    vertical-align: central;
+    cursor: pointer;
+}
+
+/*----ANIMATIONS----*/
+
+@keyframes arrow-movement
+{
+    0%
+    {
+        left: 80px;
+        top: 120px;
+    }
+
+    50%
+    {
+        left: 80px;
+        top: 150px;
+    }
+
+    100%
+    {
+        left: 80px;
+        top: 120px;
+    }
+}
+
+@-webkit-keyframes arrow-movement
+{
+    0%
+    {
+        left: 80px;
+        top: 120px;
+    }
+
+    50%
+    {
+        left: 80px;
+        top: 150px;
+    }
+
+    100%
+    {
+        left: 80px;
+        top: 120px;
+    }
+}
+
+@keyframes userinput-down
+{
+    0%
+    {
+        left: 350px;
+        top: -270px;
+    }
+
+    100%
+    {
+        left: 350px;
+        top: 80px;
+    }
+}
+
+@-webkit-keyframes userinput-down
+{
+    0%
+    {
+        left: 350px;
+        top: -270px;
+    }
+
+    100%
+    {
+        left: 350px;
+        top: 80px;
+    }
+}
+
+@keyframes userinput-up
+{
+    0%
+    {
+        left: 350px;
+        top: 80px;
+    }
+
+    100%
+    {
+        left: 350px;
+        top: -270px;
+    }
+}
+
+@-webkit-keyframes userinput-up
+{
+    0%
+    {
+        left: 350px;
+        top: 80px;
+    }
+
+    100%
+    {
+        left: 350px;
+        top: -270px;
+    }
+}
