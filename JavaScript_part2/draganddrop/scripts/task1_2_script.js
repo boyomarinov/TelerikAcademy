@@ -143,14 +143,6 @@ function newGame() {
                     break;
             }
 
-            //if (picture === 1) {
-            //    trash.style.backgroundImage = "url(../images/blank_document.png)";
-            //} else if (picture === 2) {
-            //    trash.style.backgroundImage = "url(../images/document.png)";
-            //} else {
-            //    trash.style.backgroundImage = "url(../images/documents.png)";
-            //}
-
             var rotationDegree = getRandomInteger(0, 360);
             var rotationString = "rotate(" + rotationDegree + "deg)";
             trash.style.MozTransform = rotationString;
