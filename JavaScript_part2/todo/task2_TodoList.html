@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TODO List</title>
+    <meta charset="utf-8" />
+
+    <link href="task2_TodoList_style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="todo-wrapper">
+        <form>
+            <input id="todoInput" type="text" placeholder="What else is on my list?" size="40" />
+            <input id="addItemButton" type="submit" value="" />
+        </form>
+        <button id="showAll">Show all tasks</button>
+        <button id="removeAll">Remove all tasks</button>
+
+        <ul id="list">
+        </ul>
+
+        <div id="legend">
+            <img src="images/delete.png" alt="Delete" />
+            <span>Delete</span>
+            <img src="images/done.png" alt="Mark as done" />
+            <span>Mark as done</span>
+        </div>
+    </div>
+
+    <script src="task2_TodoList_script.js"></script>
+</body>
+</html>
