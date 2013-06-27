@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Classic OOP</title>
+    <script src="scripts/classUtils.js"></script>
+    <script src="scripts/classic-school.js"></script>
+</head>
+<body>
+    <script>
+        var pesho = new Student("Pesho", "Petrov", 25, 6);
+        var ivan = new Student("Ivan", "Ivanov", 32, 5);
+        var mitko = new Student("Mitko", "Dimitrov", 23, 4);
+
+        var petrov = new Teacher("g-n", "Petrov", 41, "Math");
+
+        console.log(pesho.introduce());
+        console.log(ivan.introduce());
+        console.log(mitko.introduce());
+        console.log(petrov.introduce());
+    </script>
+</body>
+</html>

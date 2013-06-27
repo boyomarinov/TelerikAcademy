@@ -1,0 +1,39 @@
+﻿body, div, a, p, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#favouritesWrapper {
+    width: 500px;
+    height: 600px;
+    margin-left: 30px;
+    text-align: center;
+    overflow: scroll;
+}
+
+h3 {
+    margin-top: 30px;
+}
+
+a {
+    color: #373030;
+    font-weight: normal;
+    display: block;
+    margin-top: 3px;
+    text-decoration: none;
+}
+
+.favouritesParagraph {
+    margin: 0 auto;
+    font-weight: bold;
+    width: 100px;
+    vertical-align: bottom;
+    background: url('imgs/folder.png') 0 0 no-repeat;
+    padding-top: 20px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}

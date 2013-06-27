@@ -1,0 +1,32 @@
+﻿body, img, div, a, h3
+{
+    padding:0;
+    margin:0;
+}
+
+#previous, #next {
+    padding: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: #D0C9C9;
+    text-decoration: none;
+}
+
+#previous:hover, #next:hover
+{
+    color: #FFFFFF;
+    background-color: #4C4A4A;
+}
+
+#previous {
+    margin-left: 20px;
+}
+
+#next {
+    margin-left: 700px;
+}
+
+img {
+    margin: 20px;
+
+}

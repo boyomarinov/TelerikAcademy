@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Prototypal OOP</title>
+    <script src="scripts/objectUtils.js"></script>
+    <script src="scripts/prototype-school.js"></script>
+</head>
+<body>
+    <script>
+        var pesho = Object.create(Student);
+        pesho.init("Pesho", "Petrov", 25, 6);
+        var ivan = Object.create(Student);
+        ivan.init("Ivan", "Ivanov", 32, 5);
+        var mitko = Object.create(Student);
+        mitko.init("Mitko", "Dimitrov", 23, 4);
+
+        var petrov = Object.create(Teacher);
+        petrov.init("g-n", "Petrov", 41, "Math");
+
+        console.log(pesho.introduce());
+        console.log(ivan.introduce());
+        console.log(mitko.introduce());
+        console.log(petrov.introduce());
+    </script>
+
+</body>
+</html>

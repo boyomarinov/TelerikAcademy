@@ -1,0 +1,39 @@
+﻿body, div {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin: 20px;
+    padding: 5px;
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    overflow-y: scroll;
+}
+
+.child {
+    width: 100%;
+    height: 40px;
+    display: block;
+}
+
+.original-child {
+    background-color: #119823;
+}
+
+.before-child {
+    background-color: #8d140b;
+    border-top: 1px solid #f22213;
+    border-bottom: #2b0603;
+}
+
+.after-child {
+    background-color: #0a4d80;
+    border-top: 1px solid #128deb;
+    border-bottom: #031726;
+}
+
+button {
+    margin-left: 20px;
+}

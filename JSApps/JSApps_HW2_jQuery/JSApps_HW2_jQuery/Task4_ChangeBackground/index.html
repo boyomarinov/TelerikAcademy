@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change page background</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        #container {
+            width: 800px;
+            height: 500px;
+            position: relative;
+            border: 1px solid black;
+        }
+
+        input {
+            width: 99%;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <input type="color" id="colorPicker" />
+    </div>
+
+    <script src="scripts/jquery-1.10.1.js"></script>
+    <script>
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+        var container = $('#container');
+        var colorPicker = $('#colorPicker');
+
+        colorPicker.on('input', function () {
+            var randomWidth = getRandomInteger(500, 800);
+            var randomHeight = getRandomInteger(400, 600);
+            container.css('background', colorPicker.val())
+                .animate({
+                    width: randomWidth + 'px',
+                    height: randomHeight + 'px'
+                }, 500);
+        });
+    </script>
+</body>
+</html>

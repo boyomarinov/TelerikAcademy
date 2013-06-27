@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Slider</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="slider">
+        <ul>
+            <li>
+                <img src="images/nature.jpg" alt="nature" /></li>
+            <li>
+                <img src="images/nature2.jpg" alt="nature2" /></li>
+            <li>
+                <img src="images/nature3.jpg" alt="nature3" /></li>
+            <li>
+                <img src="images/iabylka.jpg" alt="iabylka" /></li>
+            <li>
+                <img src="images/water.jpg" alt="water" /></li>
+        </ul>
+    </div>
+
+    <div id="slider-nav">
+        <button class="left-arrow" data-dir="prev"></button>
+        <button class="play-pause"></button>
+        <button class="right-arrow" data-dir="next"></button>
+    </div>
+
+    <script src="scripts/jquery-1.10.1.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script>
+
+        (function () {
+            var container = $('div.slider').css('overflow', 'hidden').children('ul'),
+                slider = new Slider(container, $('#slider-nav'));
+
+            slider.nav.find('button').on('click', function () {
+                slider.setCurrent($(this).data('dir'));
+                slider.transition();
+            });
+        })();
+
+</script>
+
+</body>
+</html>

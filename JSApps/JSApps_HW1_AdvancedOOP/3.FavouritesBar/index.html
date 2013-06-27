@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Favourites Bar</title>
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/classUtils.js"></script>
+    <script src="scripts/favouritesBar.js"></script>
+</head>
+<body onload="favoriteSiteBar.display()">
+    <script>
+        var telerikAcademy = new URL("TelerikAcademy", "http://telerikacademy.com/");
+        var telerik = new URL("Telerik", "http://www.telerik.com/");
+
+        var facebook = new URL("Facebook", "http://www.facebook.com/");
+        var twitter = new URL("Twitter", "http://twitter.com/");
+        var linkedin = new URL("LinkedIn", "http://linkedin.com/");
+        var antisocial = new Folder("Social", [facebook, twitter, linkedin]);
+
+        var yahoo = new URL("Yahoo!", "http://www.yahoo.com/");
+        var sinoptik = new URL("Sinoptik", "http://sinoptik.bg/");
+        var news = new Folder("News", [yahoo, sinoptik]);
+
+        var youtube = new URL("youtube", "http://www.youtube.com/");
+        var vbox = new URL("vbox", "http://vbox7.com/");
+        var videos = new Folder("Video", [youtube, vbox]);
+
+        var favoriteSiteBar = new FavoriteSiteBar([telerik, telerikAcademy], [antisocial, news, videos]);
+
+    </script>
+</body>
+</html>

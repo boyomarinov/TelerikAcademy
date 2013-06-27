@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OOP Slider</title>
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/objectUtils.js"></script>
+    <script src="scripts/Controller.js"></script>
+</head>
+<body>
+
+    <script>
+        var prevButton = Object.create(Button);
+        prevButton.init("previous", "Previus");
+        var nextButton = Object.create(Button);
+        nextButton.init("next", "Next");
+        var img1 = Object.create(Image);
+        img1.init("Nature1", "images/nature.jpg", "images/thumbnails/nature.jpg");
+        var img2 = Object.create(Image);
+        img2.init("Nature2", "images/nature2.jpg", "images/thumbnails/nature2.jpg");
+        var img3 = Object.create(Image);
+        img3.init("Nature3", "images/nature3.jpg", "images/thumbnails/nature3.jpg");
+        var img4 = Object.create(Image);
+        img4.init("Apple", "images/iabylka.jpg", "images/thumbnails/iabylka.jpg");
+        var img5 = Object.create(Image);
+        img5.init("Water", "images/water.jpg", "images/thumbnails/water.jpg");
+
+
+        var slider = Object.create(Slider);
+        slider.init([img1, img2, img3, img4, img5], prevButton, nextButton);
+        var sliderControler = Object.create(SliderControler);
+        sliderControler.init(slider);
+        sliderControler.start();
+
+    </script>
+
+</body>
+</html>
