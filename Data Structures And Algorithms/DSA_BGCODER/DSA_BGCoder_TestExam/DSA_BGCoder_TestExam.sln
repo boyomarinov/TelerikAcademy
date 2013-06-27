@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem3_ValidateHTML", "Problem3_ValidateHTML\Problem3_ValidateHTML.csproj", "{DF587F5D-D2F8-461E-8BB5-D8C5CAEBDDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem4_ReachN", "Problem4_ReachN\Problem4_ReachN.csproj", "{46194216-B587-4EDE-AE1B-F60732FE1627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem2", "Problem2\Problem2.csproj", "{46063317-F993-4019-A2AB-8BF3C8DEE64E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF587F5D-D2F8-461E-8BB5-D8C5CAEBDDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF587F5D-D2F8-461E-8BB5-D8C5CAEBDDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF587F5D-D2F8-461E-8BB5-D8C5CAEBDDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF587F5D-D2F8-461E-8BB5-D8C5CAEBDDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46194216-B587-4EDE-AE1B-F60732FE1627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46194216-B587-4EDE-AE1B-F60732FE1627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46194216-B587-4EDE-AE1B-F60732FE1627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46194216-B587-4EDE-AE1B-F60732FE1627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46063317-F993-4019-A2AB-8BF3C8DEE64E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46063317-F993-4019-A2AB-8BF3C8DEE64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46063317-F993-4019-A2AB-8BF3C8DEE64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46063317-F993-4019-A2AB-8BF3C8DEE64E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

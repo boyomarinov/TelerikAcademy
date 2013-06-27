@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo_AplusBNta", "Algo_AplusBNta\Algo_AplusBNta.csproj", "{56761174-0FE7-4AA9-ACC8-FDE9D3505D75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algo_ColouredBalls", "Algo_ColouredBalls\Algo_ColouredBalls.csproj", "{36023D0A-4875-4D65-A1D6-7AF772B4B71D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56761174-0FE7-4AA9-ACC8-FDE9D3505D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56761174-0FE7-4AA9-ACC8-FDE9D3505D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56761174-0FE7-4AA9-ACC8-FDE9D3505D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56761174-0FE7-4AA9-ACC8-FDE9D3505D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36023D0A-4875-4D65-A1D6-7AF772B4B71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36023D0A-4875-4D65-A1D6-7AF772B4B71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36023D0A-4875-4D65-A1D6-7AF772B4B71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36023D0A-4875-4D65-A1D6-7AF772B4B71D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
