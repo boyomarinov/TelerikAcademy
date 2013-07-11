@@ -285,26 +285,45 @@
 --SET Task = 'Random task12'
 --WHERE EmployeeID = 8
 
-----TASK 30
+----TASK 30 Start a database transaction, delete all employees from the 'Sales' department 
+----along with all dependent records from the pother tables. At the end rollback the transaction.
 --BEGIN TRAN
---DELETE FROM Users
---WHERE Username='test'
+--DELETE FROM Employees
+--	SELECT d.Name
+--	FROM Employees e JOIN Departments d
+--	ON e.DepartmentID = d.DepartmentID
+--	WHERE d.Name = 'Sales'
+--	GROUP BY d.Name
 --ROLLBACK TRAN
 
-CREATE TRIGGER tr_SalesEmployeeDelete ON Employees INSTEAD OF DELETE
-AS
-	UPDATE Employees
-	SET ManagerID = NULL
-	WHERE EmployeeID IN (SELECT EmployeeID FROM Deleted)
+----TASK 31 Start a database transaction and drop the table EmployeesProjects. 
+----Now how you could restore back the lost table data?
+--BEGIN TRAN
+--DROP TABLE EmployeesProjects
+--ROLLBACK TRAN
 
-	DELETE FROM Employees
-	WHERE EmployeeID IN (SELECT EmployeeID FROM Deleted)
-GO
+--TASK 32 Find how to use temporary tables in SQL Server. Using temporary tables 
+--backup all records from EmployeesProjects and restore them back after dropping 
+--and re-creating the table.
+CREATE TABLE #TemporaryTable(
+	EmployeeID int NOT NULL,
+	ProjectID int NOT NULL
+)
 
-BEGIN TRAN
-DELETE FROM Employees
-WHERE DepartmentID = (SELECT DepartmentID FROM Departments
-					  WHERE Name = 'Sales')
-ROLLBACK TRAN
+INSERT INTO #TemporaryTable
+	SELECT EmployeeID, ProjectID
+	FROM EmployeesProjects
 
---TASK 31
+DROP TABLE EmployeesProjects
+
+CREATE TABLE EmployeesProjects(
+	EmployeeID int NOT NULL,
+	ProjectID int NOT NULL,
+	CONSTRAINT PK_EmployeesProjects PRIMARY KEY(EmployeeID, ProjectID),
+	CONSTRAINT FK_EP_Employee FOREIGN KEY(EmployeeID) REFERENCES Employees(EmployeeID),
+	CONSTRAINT FK_EP_Project FOREIGN KEY(ProjectID) REFERENCES Projects(ProjectID)
+)
+
+INSERT INTO EmployeesProjects
+SELECT EmployeeID, ProjectID
+FROM #TemporaryTable
