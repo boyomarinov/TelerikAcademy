@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Model", "BloggingSystem.Model\BloggingSystem.Model.csproj", "{F1B15097-9FF9-41AC-BC89-4D6DEBE75066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Data", "BloggingSystem.Data\BloggingSystem.Data.csproj", "{11C39BA8-9244-428E-A932-68454F9E415E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Repositories", "BloggingSystem.Repositories\BloggingSystem.Repositories.csproj", "{7096363B-7389-4660-B098-689A4F13451A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Services", "BloggingSystem.Services\BloggingSystem.Services.csproj", "{26C82C92-581C-474C-B4D0-3D2C0D20F0DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Services.Tests", "BloggingSystem.Services.Tests\BloggingSystem.Services.Tests.csproj", "{5BAE8F0B-8C44-4F55-AFBE-E629D50F90EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Services.IntegrationTests", "BloggingSystem.Services.IntegrationTests\BloggingSystem.Services.IntegrationTests.csproj", "{3156B480-6BB5-4BB4-BA7E-67311DE81F9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1B15097-9FF9-41AC-BC89-4D6DEBE75066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B15097-9FF9-41AC-BC89-4D6DEBE75066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B15097-9FF9-41AC-BC89-4D6DEBE75066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B15097-9FF9-41AC-BC89-4D6DEBE75066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C39BA8-9244-428E-A932-68454F9E415E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C39BA8-9244-428E-A932-68454F9E415E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C39BA8-9244-428E-A932-68454F9E415E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C39BA8-9244-428E-A932-68454F9E415E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7096363B-7389-4660-B098-689A4F13451A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7096363B-7389-4660-B098-689A4F13451A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7096363B-7389-4660-B098-689A4F13451A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7096363B-7389-4660-B098-689A4F13451A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C82C92-581C-474C-B4D0-3D2C0D20F0DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C82C92-581C-474C-B4D0-3D2C0D20F0DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C82C92-581C-474C-B4D0-3D2C0D20F0DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C82C92-581C-474C-B4D0-3D2C0D20F0DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BAE8F0B-8C44-4F55-AFBE-E629D50F90EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BAE8F0B-8C44-4F55-AFBE-E629D50F90EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BAE8F0B-8C44-4F55-AFBE-E629D50F90EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BAE8F0B-8C44-4F55-AFBE-E629D50F90EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3156B480-6BB5-4BB4-BA7E-67311DE81F9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3156B480-6BB5-4BB4-BA7E-67311DE81F9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3156B480-6BB5-4BB4-BA7E-67311DE81F9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3156B480-6BB5-4BB4-BA7E-67311DE81F9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

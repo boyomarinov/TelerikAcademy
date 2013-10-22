@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Services", "BloggingSystem.Services\BloggingSystem.Services.csproj", "{1B59EFCF-D0C4-4009-8CDD-164F8C752E46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Services.Tests", "BloggingSystem.Services.Tests\BloggingSystem.Services.Tests.csproj", "{64B535B0-B1B3-45C6-8812-0EEE152D5AC0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B59EFCF-D0C4-4009-8CDD-164F8C752E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B59EFCF-D0C4-4009-8CDD-164F8C752E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B59EFCF-D0C4-4009-8CDD-164F8C752E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B59EFCF-D0C4-4009-8CDD-164F8C752E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64B535B0-B1B3-45C6-8812-0EEE152D5AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B535B0-B1B3-45C6-8812-0EEE152D5AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B535B0-B1B3-45C6-8812-0EEE152D5AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B535B0-B1B3-45C6-8812-0EEE152D5AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
